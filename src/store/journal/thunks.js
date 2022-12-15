@@ -37,7 +37,7 @@ export const startNewNote = () => {
     return async( dispatch, getState) => {
         const { uid } = getState().auth
 
-        if( !uid) throw new Error('El UID del usuario no existe')
+        if( !uid) return 'El UID del usuario no existe'
         const notes = await loadNote( uid)
 
         dispatch( setNotes( notes))
