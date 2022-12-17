@@ -2,28 +2,26 @@
 import { initializeApp } from "firebase/app";
 import { getAuth} from 'firebase/auth'
 import { getFirestore} from 'firebase/firestore/lite'
+import { getEnvironments } from "../helpers/getEnvironments";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// Dev/Prod
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBhDDatwsu2fEUboEXFaYpYCAslsF4ugkw",
-//   authDomain: "react-curso-9aada.firebaseapp.com",
-//   projectId: "react-curso-9aada",
-//   storageBucket: "react-curso-9aada.appspot.com",
-//   messagingSenderId: "405216734933",
-//   appId: "1:405216734933:web:1c346e74b0491ce452bc5c"
-// };
+const {
+  VITE_APIKEY,
+  VITE_AUTHDOMAIN,
+  VITE_PROJECTID,
+  VITE_STORAGEBUCKET,
+  VITE_MESSAGINGSENDERID,
+  VITE_APPID
+} = getEnvironments()
 
-// Testing 
 const firebaseConfig = {
-  apiKey: "AIzaSyCHyPTZVbamG1fHY_HFFTvcEh4r61DedQ8",
-  authDomain: "react-testing-c66b5.firebaseapp.com",
-  projectId: "react-testing-c66b5",
-  storageBucket: "react-testing-c66b5.appspot.com",
-  messagingSenderId: "1094672349553",
-  appId: "1:1094672349553:web:6d114fd33ed4949bfeded0"
+  apiKey: VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID
 };
 
 // Initialize Firebase

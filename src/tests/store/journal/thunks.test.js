@@ -1,16 +1,16 @@
-import { collection, deleteDoc, getDocs } from "firebase/firestore/lite"
-import { FirebaseDB } from "../../../firebase/config"
-import { addNewEmptyNote, deleteNoteById, savingNewNote, setActiveNote, setNotes, setPhotosToActiveNote, setSaving, updateNote } from "../../../store/journal/journalSlice"
-import { startDeletingNote, startLoadingNotes, startNewNote, startSaveNote, startUploadingFiles } from "../../../store/journal/thunks"
+// import { collection, deleteDoc, getDocs } from "firebase/firestore/lite"
+// import { FirebaseDB } from "../../../firebase/config"
+// import { addNewEmptyNote, deleteNoteById, savingNewNote, setActiveNote, setNotes, setPhotosToActiveNote, setSaving, updateNote } from "../../../store/journal/journalSlice"
+// import { startDeletingNote, startLoadingNotes, startNewNote, startSaveNote, startUploadingFiles } from "../../../store/journal/thunks"
 
 describe('Pruebas en Journal Thunks', () => { 
 
-    const dispatch = jest.fn()
+    // const dispatch = jest.fn()
 
-    const getState = jest.fn()
+    // const getState = jest.fn()
 
 
-    beforeEach(() => jest.clearAllMocks())
+    // beforeEach(() => jest.clearAllMocks())
 
     test('startNewNote debe de crear una nueva nota en blanco', async() => { 
     //     const newNote = {
